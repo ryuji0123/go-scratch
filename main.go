@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-scratch/ofmt"
+	"fmt"
 	"net/http"
 )
 
@@ -10,8 +10,9 @@ type HelloHandler struct {
 }
 
 func (h *HelloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	ofmt.Fprintf(w, "Hello World!")
+	fmt.Fprintf(w, "Hello World!")
 }
+
 
 func main() {
 	hello:= HelloHandler{}
